@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑动折叠</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .box
+        {
+            width:600px;
+            height:700px;
+          border:beige 1px solid;
+        }
+        .box h2
+        {
+            background: #c3c8cd;
+            padding:10px 20px;
+
+        }
+        .box p
+        {
+            display: none;
+        }
+
+        </style>
+
+</head>
+<body>
+<script>
+$(document).ready(function(){
+    $(".box p").first().show();
+   $(".box h2").click(function(){
+       $(this).next("p").slideToggle("slow").siblings("p").slideUp();
+
+   })
+
+    })
+
+
+    </script>
+<div class="box">
+    <h2>国务院再推7项税收优惠 哪些适合创业公司？</h2>
+    <p>4月25日召开的国务院常务会议决定，再推出7项减税措施，</p>
+    <p>   支持创业创新和小微企业发展。这已经是今年两会后，政府第二次推出针对企业减负的政策。</p>
+
+    <h2>国务院再推7项税收优惠 哪些适合创业公司？</h2>
+    <p>4月25日召开的国务院常务会议决定，再推出7项减税措施，</p>
+    <p>   支持创业创新和小微企业发展。这已经是今年两会后，政府第二次推出针对企业减负的政策。</p>
+    <h2>国务院再推7项税收优惠 哪些适合创业公司？</h2>
+    <p>4月25日召开的国务院常务会议决定，再推出7项减税措施，</p>
+    <p>   支持创业创新和小微企业发展。这已经是今年两会后，政府第二次推出针对企业减负的政策。</p>
+    <h2>国务院再推7项税收优惠 哪些适合创业公司？</h2>
+    <p>4月25日召开的国务院常务会议决定，再推出7项减税措施，</p>
+    <p>   支持创业创新和小微企业发展。这已经是今年两会后，政府第二次推出针对企业减负的政策。</p>
+
+</div>
+</body>
+</html>

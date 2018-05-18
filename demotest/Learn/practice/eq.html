@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .banner
+        {
+            height:642px;
+            width: 1300px;
+            position: relative;
+            z-index:9;
+            border:1px solid red;
+            margin:0 auto;
+        }
+        .banner .pic li
+        {
+            position:absolute;
+            top:0;
+            left:50%;
+            display: none;
+            /*如果不用display 最后的图片会显示在第一张*/
+            margin-left: -650PX;
+            /*缩放时 图片始终在中心 margin-left定义为图像的一半*/
+        }
+        /*小图标切换*/
+    .num
+        {
+            position:absolute;
+            width: 100%;
+            bottom: 15px;
+            text-align: center;
+
+        }
+
+    .num li
+        {
+            width:20px;
+            height:20px;
+            background: #c3c8cd;
+            display:inline-block;/*行级块元素*/
+            margin:0 5px;
+            transform: rotate(45deg);
+            cursor: pointer;
+            border-radius: 10px;
+
+        }
+       .num li.on
+        {
+            background:#3d1a1b;
+        }
+
+    </style>
+    <script src="../jq/jquery/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            //$("ol").addClass("on");
+            $(".banner .pic li").eq(0).show();
+            $(".num li").eq(0).addClass("on");
+            var size=$(".pic li").length;
+
+            //手动控制轮播
+            $(".num li").mouseover(function () {
+               $(this).addClass("on").siblings().removeClass("on");
+                var idx=$(this).index();
+                i=idx;
+                $(".pic li").eq(idx).fadeIn().siblings().fadeOut();
+            })
+
+            //自动轮播器
+            var i=0;
+            var t=setInterval(move,2000)
+
+            //停住
+            $(".banner").hover(function(){
+                clearInterval(t)
+            },function(){
+                t=setInterval(move,2000)
+            })
+
+
+            function move(){
+                i++;
+                if(i==size)
+                {
+                    i=0;
+                }
+                $(".pic li").eq(i).fadeIn().siblings().fadeOut();
+                $(".num li").eq(i).addClass("on").siblings().removeClass("on");
+            }
+
+
+
+
+
+
+        })
+
+    </script>
+</head>
+
+<body>
+<div class="banner">
+    <ul class="pic">
+        <li ><a href="#"><img src="image/banner1.jpg" width="1300"></a>
+        </li>
+
+        <li><a href="#"><img src="image/banner2.jpg"width="1300"></a></li>
+        <li><a href="#"><img src="image/banner3.jpg"width="1300"></a></li>
+    </ul>
+<ol class="num">
+    <li ></li>
+    <li ></li>
+    <li ></li>
+</ol>
+</div>
+</body>
+</html>

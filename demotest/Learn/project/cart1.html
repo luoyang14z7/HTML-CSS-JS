@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    .state1{
+    color:#aaa;
+    }
+    .state2{
+    color:#000;
+    }
+    .state3{
+    color:red;
+    }
+    .state4{
+    color:green;
+    }
+    </style>
+    <script src="js/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+        var ok1=false;
+        var ok2=false;
+        var ok3=false;
+        var ok4=false;
+    // 验证用户名
+        $(".username").focus(function(){
+        //$(this).next().text('用户名应该为6-20位之间').removeClass('state1').addClass('state2');
+    }).blur(function(){
+    if($(this).val().length >= 6 && $(this).val().length <=12 && $(this).val()!=''){
+        $(this).next().text('√').removeClass('state1').addClass('state4');
+        ok1=true;
+    }else{
+         $(this).next().text('请输入用户名').removeClass('state1').addClass('state3');
+     }
+    if($(this).val()=='')
+     {
+         $(this).next().text('用户名不能为空').removeClass('state1').addClass('state3');
+     }
+    });
+
+    //验证密码
+        $('input[name="password"]').focus(function(){
+        //$(this).next().text('密码应该为6-12位之间').removeClass('state1').addClass('state2');
+    }).blur(function(){
+    if($(this).val().length >= 6 && $(this).val().length <=12 && $(this).val()!=''){
+        $(this).next().text('√').removeClass('state1').addClass('state4');
+        ok2=true;
+    }else{
+         $(this).next().text('请输入6-12位密码').removeClass('state1').addClass('state3');
+
+     }
+            if($(this).val()=='')
+            {
+                $(this).next().text('密码不能为空').removeClass('state1').addClass('state3');
+            }
+    });
+
+    //验证确认密码
+          $('input[name="repass"]').focus(function(){
+        //$(this).next().text('输入的确认密码要和上面的密码一致,规则也要相同').removeClass('state1').addClass('state2');
+    }).blur(function(){
+    if($(this).val().length >= 6 && $(this).val().length <=20 && $(this).val()!='' && $(this).val() == $('input[name="password"]').val()){
+        $(this).next().text('√').removeClass('state1').addClass('state4');
+        ok3=true;
+    }else{
+         $(this).next().text('两次密码有误').removeClass('state1').addClass('state3');
+     }
+              if($(this).val()=='')
+              {
+                  $(this).next().text('密码不能为空').removeClass('state1').addClass('state3');
+              }
+
+    });
+
+   //验证邮箱
+        $('input[name="email"]').focus(function(){
+        //$(this).next().text('请输入正确的EMAIL格式').removeClass('state1').addClass('state2');
+    }).blur(function(){
+    if($(this).val().search(/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/)==-1){
+        $(this).next().text('请输入正确的EMAIL格式').removeClass('state1').addClass('state3');
+    }else{
+         $(this).next().text('√').removeClass('state1').addClass('state4');
+         ok4=true;
+     }
+            if($(this).val()=='')
+            {
+                $(this).next().text('邮箱不能为空').removeClass('state1').addClass('state3');
+            }
+
+
+            $('input[name="phone"]').focus(function(){
+                //$(this).next().text('用户名应该为6-20位之间').removeClass('state1').addClass('state2');
+            }).blur(function(){
+                if($(this).val().match(/^(((13[0-9]{1})|(14[0-9]{1})|(17[0]{1})|(15[0-3]{1})|(15[5-9]{1})|(18[0-9]{1}))+\d{8})$/)){
+                    $(this).next().text('√').removeClass('state1').addClass('state4');
+                    ok1=true;
+                }else{
+                    $(this).next().text('请输入正确的手机号').removeClass('state1').addClass('state3');
+                }
+                if($(this).val()=='')
+                {
+                    $(this).next().text('手机号不能为空').removeClass('state1').addClass('state3');
+                }
+            });
+
+
+
+           /* function vailPhone(){
+                var phone = jQuery("#phone").val();
+                var flag = false;
+                var message = "";
+                var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(17[0]{1})|(15[0-3]{1})|(15[5-9]{1})|(18[0-9]{1}))+\d{8})$/;
+                if(phone == ''){
+                    $("#phone").next().text('手机号码不能为空').removeClass('state1').addClass('state3');
+                }else if(phone.length !=11){
+                    message = "请输入有效的手机号码！";
+                }else if(!myreg.test(phone)){
+                    message = "请输入有效的手机号码！";
+                }else if(checkPhoneIsExist()){
+                    message = "该手机号码已经被绑定！";
+                }else{
+                    flag = true;
+                }
+                if(!flag){
+                    //提示错误效果
+                    $(this).next().text('请输入正确的手机格式').removeClass('state1').addClass('state3');
+                }else{
+                    //提示正确效果
+                    $(this).next().text('√').removeClass('state1').addClass('state4');
+                }
+                return flag;
+            }*/
+
+    });
+
+    //提交按钮,所有验证通过方可提交
+
+        $('.submit').click(function(){
+    if(ok1 && ok2 && ok3 && ok4){
+        $('form').submit();
+    }else{
+         return false;
+     }
+    });
+
+    });
+    </script>
+      </head>
+
+
+        <body>
+
+        <form action='do.php' method='post' >
+
+       用 户 名:<input type="text" name="username" class="username" placeholder="请输入用户名">
+       <span class='state1'></span><br/><br/>
+            密　　码:<input type="password" name="password" placeholder="请输入6-12位密码">
+            <span class='state1'></span><br/><br/>
+
+            确认密码:<input type="password" name="repass" placeholder="请确认密码">
+            <span class='state1'></span><br/><br/>
+
+            邮　　箱:<input type="text" name="email" placeholder="请输入邮箱">
+            <span class='state1'></span><br/><br/>
+
+            手机号:<input type="text" name="phone" placeholder="请输入手机号" id="phone">
+            <span class='state1'></span><br/><br/>
+
+            <a href="javascript:"><img class='submit' type='image' src='./images/reg.gif' /></a>
+        </form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,542 @@
+*{padding:0;margin:0}
+body{font-family: "Microsoft YaHei UI";}
+ul{list-style: none}
+a{text-decoration: none;}
+
+.header
+{
+    width: 100%;
+    height:110px;
+
+}
+.header .container
+{
+    width:1320px;
+    height:110px;
+    margin:0 auto;
+    border:1px solid red;
+
+}
+.container .logo
+{
+    width:200px;
+    height: 110px;
+    float:left;
+    line-height: 110px;
+
+}
+.container .nav
+{
+    width:500px;
+    height:110px;
+    float:left;
+    line-height: 110px;
+    margin-left:170px;
+}
+.container .nav li
+{
+
+    float:left;
+    padding-left:40px;
+}
+.container .nav li a
+{
+    font-size: 18px;
+    color:#818181;
+}
+.container .nav li a:hover
+{
+    color:cornflowerblue;
+}
+/*搜索框*/
+.container .search
+{
+    float: left;
+    height:45px;
+    width:220px;
+    border:#979797 solid 1px;
+    line-height: 45px;
+    margin:28px 40px 40px 37px;
+}
+.search input
+{
+    display:block;
+    float: left;
+    outline: none;
+}
+.search .keyword
+{
+    width:150px;
+    height:41px;
+    border:none;
+    border-right:#979797 solid 1px;
+    padding:0 10px;
+    margin-top:2px;
+    font-size: 16px;
+}
+.search .btn
+{
+    width:45px;
+    height:45px;
+    border:none;
+    background: url("image/search.png") no-repeat center;
+    cursor: pointer;
+
+}
+.container .language
+{
+    line-height: 110px;
+    float:right;
+}
+.container .language a
+{
+    color:#666;
+    font-size: 16px;
+    padding:0 10px;
+}
+.container .language span
+{
+    color: #015694;
+    font-size: 16px;
+
+}
+.container .language a:hover
+{
+    text-decoration: underline ;
+}
+
+
+
+/*海报区域*/
+
+.banner
+{
+    height:580px;
+    width: 100%;
+    background: yellowgreen;
+    position: relative;
+    overflow: hidden;
+}
+.banner ul li
+{
+    position:absolute;
+    top:0;
+    left:50%;
+    display: none;
+    /*如果不用display 最后的图片会显示在第一张*/
+    margin-left: -720PX;
+    /*缩放时 图片始终在中心 margin-left定义为图像的一半*/
+}
+.banner ul li.active
+{
+    display:block;
+}
+
+/*小图标切换*/
+.banner ol
+{
+    position:absolute;
+    width: 100%;
+
+    bottom:18px;
+    text-align: center;
+}
+.banner ol li
+{
+    width:8px;
+    height:8px;
+    background: rgba(255,255,255,0.5);
+    display:inline-block;/*行级块元素*/
+    margin:0 5px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+.banner ol li:hover
+{
+    background: rgba(255,255,255,1);
+
+}
+.banner .btn
+{
+    width:100px;
+    height:140px;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    /*不添加就会被覆盖*/
+    top:50%;
+    margin-top:-70px;
+    color:#fff;
+    font-size: 100px;
+    text-align: center;
+    line-height: 140px;
+    font-family: "Mesquite Std";
+    cursor: pointer;
+
+}
+.banner .btn_l
+{
+    left:0;
+}
+.banner .btn_r
+{
+
+    right:0;
+}
+
+/*导航栏区域*/
+.intro
+ {
+    height:120px;
+    width: 100%;
+    background: #818181;
+ }
+.intro .nav1
+{
+    height:120px;
+    width:1200px;
+    margin:0 auto;
+}
+.intro .nav1 li
+{
+    float:left;
+    width:109px;
+    height:120px;
+    margin-top: 10px;
+    position: relative;
+
+
+
+}
+.intro .nav1 li a
+{
+    display:block;
+
+}
+/*利用背景图片position*/
+.intro .nav1 li i
+{
+    display: block;
+    width:60px;
+    height:60px;
+    margin:0 auto;
+    border-radius: 50%;
+    background-position: left 60px;
+}
+.intro .nav1 li i.jlsj {background: url("image/jlcx.png");}
+.intro .nav1 li i.ppcx {background: url("image/ppcx.png");}
+.intro .nav1 li i.acdg {background: url("image/acdg.png");}
+.intro .nav1 li i.gfsc {background: url("image/gfsc.png");}
+.intro .nav1 li i.gafw {background: url("image/jlcx.png");}
+.intro .nav1 li i.jspp {background: url("image/jlcx.png");}
+.intro .nav1 li i.rlzy {background: url("image/jlcx.png");}
+.intro .nav1 li i.zxdt {background: url("image/jlcx.png");}
+.intro .nav1 li i.cysq {background: url("image/jlcx.png");}
+.intro .nav1 li i.zsjm {background: url("image/jlcx.png");}
+.intro .nav1 li i.xxgk {background: url("image/jlcx.png");}
+
+
+.intro .nav1 li span
+{
+    display: block;
+    color:white;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+/*只针对i的背景进行修改*/
+.intro .nav1 li:hover i
+{
+    background-position:left -60px ;
+    background-color:#fff ;
+
+}
+/*下拉列表*/
+.intro  li .down
+{
+
+    background: white;
+    position:absolute;
+    left:0;
+    top:109px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    display:none;
+}
+
+.intro  li .down_jlsj
+{
+    width:550px;
+    height:290px;
+
+}
+.down_jlsj .left,.center
+{
+    margin:26px 30px;
+    line-height: 1.8em;
+    float:left;
+}
+.down_jlsj dl
+{
+    margin-bottom: 20px;
+}
+.down_jlsj dl a:hover
+{
+    color:#0067b2;
+}
+.down_jlsj dt a
+{
+    font-size: 14px;
+    font-weight: 900;
+    color: #666;
+}
+.down_jlsj dd a
+{
+    font-size: 12px;
+    color: #555;
+    background: url("image/signPic.gif") no-repeat left -40px;
+    padding-left: 10px;
+}
+.down_jlsj dd a:hover
+{
+    background-position:left -100px;
+}
+.down_jlsj .right
+{
+    float:left;
+    margin-top: 35px;
+    margin-right: 40px;
+    position:relative;
+
+}
+.down_jlsj .right span
+{
+    display:block;
+    width:20px;
+    height:20px;
+    background: #0067b2;
+    position:absolute;
+    text-align: center;
+    top:130px;
+    right:0;
+
+}
+.down_jlsj .right p
+{
+    font-size: 12px;
+
+}
+
+.down_jlsj .right a
+{
+    color:#666;
+}
+
+.down_jlsj .right a:hover
+{
+    color:#0067b2;
+}
+
+
+
+
+.intro  li .down_ppcx
+{
+    width:800px;
+    height:350px;
+
+}
+.intro  li .down_acdg
+{
+    width:570px;
+    height:200px;
+
+}
+.intro  li:hover .down
+{
+    display:block;
+}
+
+
+/*商品图标区域*/
+.pro
+{
+    height:200px;
+    width: 1200px;
+    margin: 20px auto;
+}
+
+.pro  li
+{
+    float:left;
+}
+/*图片和文字的宽度 单个*/
+.pro li a
+{
+    color:#666;
+    display: block;
+    height: 100px;
+    width:171px;
+
+}
+.pro li a:hover
+{
+    color:#0067b2;
+}
+/*让图片居中*/
+.pro li img
+{
+    display:block;
+    margin:0 auto;
+}
+.pro span
+{
+    display:block;
+    margin-top: 8px;
+    text-align: center;
+}
+
+
+
+.title
+{
+    height:26px;
+   text-align: center;
+
+    font-weight: 900;
+    text-transform: uppercase;
+    color:#231815;
+    text-transform: uppercase;
+    font-size:24px;
+    font-family: "Adobe 宋体 Std L";
+    margin:40px;
+
+
+}
+.news
+{
+    height:300px;
+    width:1280px;
+    margin:0 auto;
+
+}
+.news .pic
+{
+    height:300px;
+    width:426px;
+    float:left;
+    position: relative;
+    overflow: hidden;
+}
+.news .pic .ceng
+{
+    height:300px;
+    width:426px;
+    background: rgba(41,41,41,0.5);
+    position:absolute;top:0;left:0;
+    color:white;
+    font-weight: 300;
+
+}
+.news .pic .ceng p
+{
+    display:block;
+    font-size:1.2rem;
+    margin-top:20px ;
+    margin-left:20px;
+    font-family: "Adobe 宋体 Std L";
+
+}
+.news .pic .ceng span
+{
+    display:block;
+    font-size:12px;
+    margin-top:13px ;
+    margin-left:20px;
+}
+
+.pic img
+{
+    transition: 0.5s;
+}
+
+.pic:hover img
+{
+    transform:scale(1.1);
+}
+.pic:hover .ceng
+{
+    background: none;
+}
+
+.foot
+{
+
+    background:rgb(28,14,14);
+    margin-top: 100px;
+    padding:40px 0;
+
+
+}
+.foot .foot1
+{
+    height:100px;
+    width:1300px;
+
+    margin:0 auto;
+
+}
+.foot1 img
+{
+    display:block;
+    float:left;
+    width:120px;
+    height:80px;
+    margin-top: 10px;
+}
+
+.text
+{
+
+    color:white;
+    float:left;
+    margin-top:18px;
+    margin-left:80px;
+   height:80px;
+    width:800px;
+
+    font-family: "Adobe 宋体 Std L";
+
+}
+.text li
+{
+    float:left;
+    padding:0 20px;
+}
+.text .except
+{
+
+}
+.text li a
+{
+    color:white;
+    font-size: 16px;
+    font-weight: 500;
+}
+.text li a:hover
+{
+    color:#0067b2;
+}
+.text p
+{
+    display:block;
+    float:left;
+    margin-top:20px;
+    margin-left:20px;
+}
+
+
+
+
+
+

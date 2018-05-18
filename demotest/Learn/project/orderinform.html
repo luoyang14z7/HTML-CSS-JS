@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+  .cart_table
+  {
+      border:1px solid red;
+  }
+
+    </style>
+</head>
+<body bgcolor="#d3d3d3">
+
+<div class="orderbox box2">
+    <table class="form_box"  border="0" width="990" cellspacing="2" align="center">
+        <tr>
+            <td >
+                <table class="inform_box" width="100%" cellspacing="0">
+                <tr bgcolor="#eee" height="40">
+                    <td colspan="2">订单信息</td>
+                </tr>
+
+                    <tr  height="60">
+                        <td width="300" align="right" >*收货人姓名：</td>
+                        <td><input type="text" name="username" ></td>
+                    </tr>
+
+                <tr height="60">
+                    <td width="300" align="right" >*手机号码：</td>
+                    <td><input type="text" name="phone" ></td>
+                </tr>
+                <tr height="60">
+                    <td width="300" align="right">*收货地址：</td>
+                    <td><input type="password" name="password" ></td>
+                </tr>
+
+                <tr height="60">
+                    <td width="300" align="right">*邮政编码：</td>
+                    <td><input type="password" name="password"></td>
+                </tr>
+            </table>
+            </td>
+        </tr>
+
+   <tr>
+        <td >
+            <table class="pay_box"   width="100%" cellspacing="0">
+            <tr bgcolor="#eee" height="40">
+                <td colspan="3">*支付方式:</td>
+            </tr>
+
+            <tr  height="60" >
+                <td width="240"><input type="radio" name="yongtu" >支付宝  </td>
+                <td width="240"><input type="radio" name="yongtu" >微信</td>
+                <td width="240"><input type="radio" name="yongtu" >银联</td>
+
+        </table>
+        </td>
+   </tr>
+
+<tr>
+    <td height="40"></td>
+</tr>
+   <tr>
+       <td>
+    <table width="1100" border="0" align="center" cellpadding="8" cellspacing="0" class="cart_table">
+        <tbody><tr bgcolor="#eee">
+            <th width="100" ></th>
+            <th align="left">商品名称</th>
+            <th width="200" align="center">单价</th>
+            <th width="200" align="center">数量</th>
+        </tr>
+
+        <tr >
+            <td><a target="_blank" href="#"><img  src="image/slide-1.jpg" height="180" class="img"></a></td>
+            <td><a target="_blank" href="#">咖啡豆</a></td>
+            <!--颜色-->
+
+            <td align="center">￥5500.00<input name="goods_price" type="hidden" value="5500.00"></td>
+            <td align="center">1</td>
+
+        </tr>
+        <tr bgcolor="#eee">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td align="right">应付总额：<font color="#FF0000">￥<label >200</label></font></td>
+        </tr>
+
+        </tbody></table>
+       </td>
+   </tr>
+    </table>
+
+
+
+</div>
+
+
+</body>
+</html>

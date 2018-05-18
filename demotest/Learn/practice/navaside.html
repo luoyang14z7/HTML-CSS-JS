@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jq/jquery/jquery.min.js"></script>
+    <style>
+/*.aside{
+    position: fixed;bottom:0;right:0;border:1px solid red;
+    display: none;cursor: pointer;
+}
+        .aside a {
+             display:block;
+             height:100px;
+             width: 100px;
+             background: #5dafd1 ;
+
+         }
+        .head{
+            background: palegoldenrod;
+            height:100px;
+            width:100%;
+
+            transition:1s;
+            top:-100px;
+            left:0;
+            z-index:10;
+        }
+        .head1
+        {
+            background: whitesmoke;
+            height:100px;
+            width:100%;
+            position:fixed;
+            z-index:9;
+        }
+        .head1 li
+        {
+            float:left;
+            padding:0 30px;
+        }
+
+        .on{top:0;}
+        .in{top:-100px}*/
+        .box{
+            height:400px;
+            width:100%;
+            background: #c3c8cd;
+
+        }
+
+        </style>
+</head>
+<body>
+<script>
+    $(function(){
+
+      /*  $(window).scroll(function(){
+            if($(this).scrollTop()>=0){
+                $(".aside").fadeIn();
+                //$(".head").addClass("on");
+
+            }
+            else if($(this).scrollTop()>=300)
+            {
+                $(".head").addClass("in");
+            }
+        })*/
+       /* $(".head1 li").click(function(){
+            var idx=$("this").index();
+            var boxt=$(".box").eq(idx).offset().top;
+            alert(boxt)
+          //  $("body,html").animate({scrollTop(boxt)})
+
+        })*/
+       //alert($(".box").offset().top)
+
+       /* $(".head1 li").click(function(){
+            alert($(this).index());
+
+        })*/
+    })
+    </script>
+<!--<div class="head">
+</div>
+<div class="head1">
+    <ul>
+        <li class="item"><a href="#" >111</a></li>
+        <li class="item"><a href="#" >222</a></li>
+        <li class="item"><a href="#" >333</a></li>
+        <li class="item"><a href="#" >444</a></li>
+
+    </ul>
+</div>
+<div class="aside">
+    <a href="#top">返回顶部</a>
+    <a href="#bottom">返回底部</a>
+</div>
+<a name="top"></a>
+
+<div class="box" style="height:400px;width:100%;background: #c3c8cd;">111
+</div>
+<div class="box" style="height:400px;width:100%;background: yellow;">2222
+</div>
+<div class="box" style="height:400px;width:100%;background: #f7353a;">3
+</div>
+
+<a name="bottom"></a>-->
+
+<div class="box">
+</div>
+
+</body>
+</html>

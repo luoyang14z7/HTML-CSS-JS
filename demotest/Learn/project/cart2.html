@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+<script>
+ function vailPhone(){
+var phone = jQuery("#phone").val();
+var flag = false;
+var message = "";
+var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(17[0]{1})|(15[0-3]{1})|(15[5-9]{1})|(18[0-9]{1}))+\d{8})$/;
+if(phone == ''){
+$("#phone").next().text('手机号码不能为空').removeClass('state1').addClass('state3');
+}else if(phone.length !=11){
+message = "请输入有效的手机号码！";
+}else if(!myreg.test(phone)){
+message = "请输入有效的手机号码！";
+}else if(checkPhoneIsExist()){
+message = "该手机号码已经被绑定！";
+}else{
+flag = true;
+}
+if(!flag){
+//提示错误效果
+
+}else{
+//提示正确效果
+
+}
+return flag;
+
+}
+
+</script>
+
+手机号:<input type="text" name="phone" placeholder="请输入手机号" id="phone">
+<span class='state1'></span><br/><br/>
+</body>
+</html>

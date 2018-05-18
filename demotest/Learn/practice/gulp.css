@@ -1,0 +1,137 @@
+*{padding:0;margin:0}
+body{font-family: "Microsoft YaHei UI";}
+ul{list-style: none}
+
+.header
+{
+    background:#cf4646;
+    width:100%;
+    height:50px;
+    color:white;
+}
+.header .nav
+{
+    width:85%;
+    height:50px;
+    margin:0 auto;
+}
+.nav a
+{
+    text-decoration: none;
+}
+.header .nav a:hover
+{
+    color: white;
+}
+.nav .logo
+{
+    font-size: 20px;
+    float:left;
+    line-height:50px;
+    color: #efefef;
+
+}
+.header .float
+{
+    float:right;
+}
+.header .nav li
+{
+    float:right;
+}
+.nav .float  a
+{
+    display:block;
+    line-height: 50px;
+    padding:0 10px;
+    font-size: 13px;
+    color: gainsboro;
+}
+
+.banner
+{
+    background:#cf4646;
+    width:100%;
+    height:400px;
+    margin-bottom: 20px;
+    text-align: center;
+    color:white;
+}
+.banner .text p
+{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.banner .text a
+{
+    display:block;
+    text-decoration: none;
+    color: #efbfbf;
+    background-color:transparent;
+    width:90px;
+    height:40px;
+    border:#efbfbf solid 2px;
+    margin:0 auto;
+    text-align: center;
+    padding: 3px;
+    line-height: 40px;
+}
+.banner .text a:hover
+{
+    color: white;
+    border-color:white;
+}
+.main
+{
+    padding-left: 70px;
+    padding-right:70px;
+    background: white;
+}
+.main h2
+{
+    font-size: 30px;
+    font-weight:100;
+    color:#333;
+
+}
+.main p
+{
+    font-size: 18px;
+    color:#333;
+}
+.main .section1
+{
+
+    width:50%;
+    height:200px;
+    float:left;
+}
+
+.main .section2
+{
+
+    width:50%;
+    height:200px;
+    float:left;
+
+}
+.main .section3
+{
+
+    width:50%;
+    height:200px;
+    float:left;
+
+
+
+}
+.main .section4
+{
+
+    width:50%;
+    height:200px;
+    float:left;
+
+
+}

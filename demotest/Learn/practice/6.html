@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+    1.页内样式  只对本页面
+    2.外链样式 通过引入css文件，再用link导入
+    3.行内样式，通过标签的属性添加css样式，作用区域为本标签
+
+    标签选择器 < 类选择器 < id选择器 < 行内样式
+    单选择器 < 复合选择器 < 行内样式
+    一个class可以设定多个值
+    -->
+    <style>
+        .box{
+            background: #1E9FFF;width:600px;height:300px;overflow :scroll;  /*滚动条（无论多少字） auto自动*/
+
+        }
+        /*为子级撑开父级高度 因为父级是边框 就要加上overflow: hidden 不会被子级浮动影响*/
+        .out{width:500px;border:3px solid greenyellow;margin:0 auto;overflow: hidden;background:cornflowerblue;}
+        .out .row1{background: red;width:100px;height:100px;float:left;}
+        .out .row2{background: whitesmoke;width:100px;height:200px;float:right;opacity: 0.3;}/*变透明*/
+
+    </style>
+
+</head>
+<body>
+<div class="box">金陵科技学院金陵科技学院金陵科技学院金陵科技学院
+    金陵科技学院 金陵科技学院 金陵科技学院金陵科技学院金陵科技学院金陵科技学院金陵科技学院</div>
+<br><br><hr><br><br>
+<div class="out">
+    <div class="row1"></div>
+    <div class="row2"></div>
+</div>
+</body>
+</html>
