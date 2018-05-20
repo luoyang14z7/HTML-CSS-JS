@@ -29,8 +29,10 @@ body
 
 .shop-content .shopcon
 {
-  height:400px;
+    width:1050px;
+    height:400px;
     padding-bottom: 30px;
+    margin:0 auto;
 
 
 }
