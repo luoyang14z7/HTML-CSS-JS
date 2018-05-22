@@ -3,7 +3,7 @@ $(function(){
     var ok1=false;
     var ok2=false;
     var ok3=false;
-    var ok4=false;
+
 
     $("#uphone").focus(function(){
         //$(this).next().text('用户名应该为6-20位之间').removeClass('state1').addClass('state2');
@@ -55,7 +55,7 @@ $(function(){
     });
 
         $('.sign').click(function(){
-            if(ok1 && ok2 && ok3 && ok4){
+            if(ok1 && ok2 && ok3){
                 $.ajax({       //用ajax来实现不刷新网页的基础上更新数据
                     type:"post", //请求方式
                     url:"/users/reg", //路径
