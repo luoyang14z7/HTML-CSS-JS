@@ -61,7 +61,7 @@ $(function(){
                     url:"/users/reg", //路径
                     data:$("form"),
                     success:function(){
-                        alert("注册成功");
+                        alert("注册成*功");
                         window.location = "login.html"; //注册成功就跳转到login.html
                     }
                 });

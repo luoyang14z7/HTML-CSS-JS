@@ -21,16 +21,16 @@ a{text-decoration: none;}
 /*导航栏*/
 .head .nav
 {
-    width:1100px;
+    width:1200px;
     height:80px;
     margin:0 auto;
     position: relative;
-
 }
-.nav .nav1
+.nav .left
 {
-    float:left;
-    width:420px;
+  position: absolute;
+    top:0 ;
+    left:6%;
 }
 
 .nav .logo
@@ -41,9 +41,19 @@ a{text-decoration: none;}
 }
 .nav .right
 {
-    float:right;
-
-
+   position: absolute;
+    top:0;
+    left:58%;
+}
+.nav .right-login
+{
+    float: right;
+    line-height: 80px;
+    text-align: center;
+}
+.nav .right-login .head-exit
+{
+    display:none;
 }
 
 /*左边和右边导航栏*/
@@ -54,15 +64,16 @@ a{text-decoration: none;}
     display:block;
     width:140px;
     text-align: center;
-
 }
-.nav .nav1 ul li> a
+.nav  a
 {
     font-size: 16px;
     color:rgb(30,30,30);
     line-height: 80px;
     font-family: Bahnschrift;
 }
+
+
 
 /*下拉框*/
 .nav .down
