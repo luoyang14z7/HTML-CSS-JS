@@ -1,6 +1,10 @@
 目前商品列表做好了，碰到以下错误，提醒自己。
 
-
+ @ResponseBody
+ return 不会跳转地址。
+ 
+ 
+ 
 List<Map<String, Object>> getshop = session.selectList("yang.dao.ShoplistMapper.selectall");
 selectcall 是mapper.java指向xml的ID。
 
