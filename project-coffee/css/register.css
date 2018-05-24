@@ -1,0 +1,122 @@
+*{padding:0;margin:0}
+ul{list-style: none}
+a{text-decoration: none;}
+
+body
+{
+
+    background:rgba(249,237,234,0.5);
+    font-family: "Microsoft YaHei UI";
+    color: #3d4444;
+}
+
+.top1
+{
+    height:1000px;
+    width:100%;
+    position: relative;
+
+
+}
+.top1 .register-banner
+{
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left: -700PX;
+
+
+}
+
+.register
+{
+    width:1400px;
+    height:900px;
+    position: absolute;
+    top:0;
+    left:50%;
+    margin-left: -700px;
+}
+.register .register-title
+{
+    background: none;
+    box-shadow: none;
+    margin:30px auto;
+}
+.register .register-box
+{
+
+    width:700px;
+    margin: 110px auto;
+    background: #eeeeee;
+    box-shadow: 5px 5px 5px ;
+    border-radius: 20px;
+    height:700px;
+
+}
+.register form
+{
+    width:400px;
+    font-size: 20px;
+    margin:0 auto;
+    height:400px;
+
+
+}
+
+.register input
+{
+    width:400px;
+    height:40px;
+    margin:10px 0;
+    font-size: 18px;
+    background: whitesmoke;
+}
+.register  a
+{
+    font-size: 16px;
+    color: #2d6987 ;
+
+}
+
+.register  a:hover
+{
+  text-decoration:underline;
+
+}
+.register button
+{
+    width:140px;
+    height:40px;
+    margin-top: 30px ;
+    margin-left:140px;
+    font-size: 18px;
+    color: #2F4056;
+    background: whitesmoke;
+    border:1px solid #b5cfd2;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #3d1a1b;
+}
+
+.register .sign a
+{
+    display:block;
+    width:200px;
+    height:40px;
+    margin:20px auto;
+    margin-left:110px;
+    text-align: center;
+}
+
+.state1{
+    color:#aaa;
+}
+
+.state3{
+    color:indianred;
+    font-size: 16px;
+}
+.state4{
+    color:indianred;
+}
+

@@ -1,0 +1,204 @@
+*{padding:0;margin:0}
+ul{list-style: none}
+a{text-decoration: none;}
+
+body
+{
+    background:rgba(249,237,234,0.5);
+    font-family: "Microsoft YaHei UI";
+    color: #3d4444;
+}
+
+
+/*新品内容*/
+
+.index-content
+{
+    width:1000px;
+    height:1000px;
+    margin:0  auto;
+    margin-bottom: 80px;
+    position:relative;
+}
+
+.index-content .txt
+{
+    width:550px;
+    height:180px;
+    position: absolute;
+    line-height: 1.8em;
+    text-align: center;
+    color: #3d4444;
+
+}
+.index-content .txt h2
+{
+
+    font-family: "Adobe 宋体 Std L";
+    line-height: 4em;
+
+
+}
+.index-content .txt p
+{
+    font-size:16px;
+}
+
+
+
+.index-content .box
+{
+    float:left;
+    width:300px;
+    height:400px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.index-content .box img
+{
+    transition: 0.4s;
+}
+.index-content  .box:hover img
+{
+    transform:scale(1.2);
+}
+.index-content .text1
+{
+    top:70px;
+    left:20px;
+}
+.index-content .box1
+{
+   left: 600px;
+}
+
+.index-content .box2
+{
+    left: 40px;
+    top:300px;
+}
+.index-content .text2
+{
+    top:440px;
+    left:400px;
+}
+.index-content .text3
+{
+    top:760px;
+    width:450px;
+    height:200px;
+
+}
+.index-content .box3
+{
+    left: 500px;
+    top:700px;
+    width:450px;
+    height:300px;
+}
+
+
+
+/*咖啡豆介绍*/
+.local
+{
+    width:1100px;
+    height:680px;
+    margin:60px auto;
+    position:relative;
+
+}
+
+.local .img1
+{
+    float:left;
+    top:20px;
+    left:0;
+    position: absolute;
+}
+.local .text2
+{
+    width:550px;
+    height:150px;
+
+    top: 550px;
+    left: 40px;
+    position: absolute;
+    line-height: 1.6em;
+    text-align: center;
+    font-size: 18px;
+}
+
+.local .text
+{
+    width:380px;
+    height:240px;
+    top: 50px;
+    left: 720px;
+    position: absolute;
+    line-height: 1.6em;
+    text-align: center;
+    font-size: 18px;
+
+}
+.local .text h2
+{
+    font-size: 26px;
+    line-height: 1.8em;
+    font-family: "Adobe 宋体 Std L";
+}
+
+.local .img3
+{
+    position: absolute;
+    top:300px;
+    left:600px;
+}
+
+
+
+/*团队*/
+
+.index-team
+{
+    width:1100px;
+    height:700px;
+    margin:60px auto;
+    position:relative;
+
+}
+.index-team .team-text
+{
+    position:absolute;
+    width:400px;
+    height:180px;
+    top:80px;
+    left:700px;
+    text-align:right;
+    line-height: 1.6em;
+    font-size: 20px;
+}
+.index-team .pic
+{
+    position:absolute;
+}
+.index-team .img2
+{
+    top:300px;
+    left:500px;
+}
+
+/*周边产品标题*/
+.periphreral
+{
+    width:500px;
+    height:80px;
+    margin:100px auto;
+    margin-bottom: 40px;
+    background: rgba(181,207,210,0.3);
+
+}
+
+
+
