@@ -1,0 +1,62 @@
+*{padding:0;margin:0}
+ul{list-style: none}
+a{text-decoration: none;}
+
+body
+{
+    background:rgba(249,237,234,0.5);
+    font-family: "Microsoft YaHei UI";
+    color: #3d4444;
+}
+
+.product-top{
+    height:409px;
+    width:100%;
+    position: relative;
+}
+.product-banner
+{
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left: -800PX;
+}
+.content
+{
+
+    width:1200px;
+    margin:20px auto;
+}
+
+.htmleaf-container .food
+{
+    width:400px;
+    height:80px;
+    margin:70px auto;
+    text-align: center;
+    line-height: 80px;
+    font-size: 32px;
+    color: #3d4444;
+    font-family: "Adobe 宋体 Std L";
+    background: rgba(181,207,210,0.3);
+    box-shadow: 5px 5px 3px #888888;
+}
+
+.htmleaf-container h3
+{
+    line-height:3em;
+    color: whitesmoke;
+}
+.htmleaf-container p
+{
+    font-size: 18px;
+    line-height: 1.8em;
+    color: whitesmoke;
+}
+
+
+
+
+
+
+

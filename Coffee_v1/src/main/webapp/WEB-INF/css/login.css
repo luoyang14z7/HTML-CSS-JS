@@ -1,0 +1,105 @@
+*{padding:0;margin:0}
+ul{list-style: none}
+a{text-decoration: none;}
+
+body
+{
+
+    font-family: "Microsoft YaHei UI";
+    color: #3d4444;
+    background:rgba(249,237,234,0.5);
+}
+
+.top1
+{
+    height:1000px;
+    width:100%;
+    position: relative;
+
+
+}
+.login-banner
+{
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left: -700PX;
+
+
+}
+
+.login
+{
+    width:1400px;
+    height:900px;
+    position: absolute;
+    top:0;
+    left:50%;
+    margin-left: -700px;
+}
+.login-box .login-title
+{
+    background: none;
+   box-shadow: none;
+    margin:20px auto;
+}
+.login .login-box
+{
+
+    width:600px;
+    margin: 150px auto;
+    background: #eeeeee;
+    box-shadow: 5px 5px 5px ;
+    border-radius: 20px;
+
+}
+.login-box form
+{
+    margin:0 auto;
+    width:400px;
+    font-size: 18px;
+}
+.login-box input
+{
+    width:400px;
+    height:40px;
+    margin:30px 0;
+    font-size: 18px;
+    background: whitesmoke;
+}
+.login-box .num-text
+{
+
+}
+.login-sign button
+{
+    width:120px;
+    height:50px;
+    margin: 30px 140px;
+    font-size: 18px;
+    color: #2F4056;
+    background: whitesmoke;
+    border:1px solid #b5cfd2;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #3d1a1b;
+}
+.login-sign span
+{
+    display:block;
+    width:400px;
+    height:60px;
+    text-align: center;
+}
+.login-sign  a
+{
+
+    color: #2d6987 ;
+    font-size: 16px;
+
+}
+
+.login-sign  a:hover
+{
+    text-decoration:underline;
+
+}

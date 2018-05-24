@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yang.dao.ShoplistMapper">
+  <resultMap id="BaseResultMap" type="yang.model.Shoplist">
+    <id column="SID" jdbcType="INTEGER" property="sid" />
+    <result column="shopname" jdbcType="VARCHAR" property="shopname" />
+    <result column="shopdes" jdbcType="VARCHAR" property="shopdes" />
+    <result column="shoppri" jdbcType="INTEGER" property="shoppri" />
+    <result column="shopimg" jdbcType="VARCHAR" property="shopimg" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    SID, shopname, shopdes, shoppri, shopimg
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from shoplist
+    where SID = #{sid,jdbcType=INTEGER}
+  </select>
+  <select id="selectall"  parameterType="java.util.HashMap" resultType="map">
+    select
+    shopname,shopdes,shoppri,shopimg
+    from shoplist
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from shoplist
+    where SID = #{sid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="yang.model.Shoplist">
+    insert into shoplist (SID, shopname, shopdes,
+      shoppri, shopimg)
+    values (#{sid,jdbcType=INTEGER}, #{shopname,jdbcType=VARCHAR}, #{shopdes,jdbcType=VARCHAR},
+      #{shoppri,jdbcType=INTEGER}, #{shopimg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="yang.model.Shoplist">
+    insert into shoplist
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sid != null">
+        SID,
+      </if>
+      <if test="shopname != null">
+        shopname,
+      </if>
+      <if test="shopdes != null">
+        shopdes,
+      </if>
+      <if test="shoppri != null">
+        shoppri,
+      </if>
+      <if test="shopimg != null">
+        shopimg,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sid != null">
+        #{sid,jdbcType=INTEGER},
+      </if>
+      <if test="shopname != null">
+        #{shopname,jdbcType=VARCHAR},
+      </if>
+      <if test="shopdes != null">
+        #{shopdes,jdbcType=VARCHAR},
+      </if>
+      <if test="shoppri != null">
+        #{shoppri,jdbcType=INTEGER},
+      </if>
+      <if test="shopimg != null">
+        #{shopimg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="yang.model.Shoplist">
+    update shoplist
+    <set>
+      <if test="shopname != null">
+        shopname = #{shopname,jdbcType=VARCHAR},
+      </if>
+      <if test="shopdes != null">
+        shopdes = #{shopdes,jdbcType=VARCHAR},
+      </if>
+      <if test="shoppri != null">
+        shoppri = #{shoppri,jdbcType=INTEGER},
+      </if>
+      <if test="shopimg != null">
+        shopimg = #{shopimg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where SID = #{sid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="yang.model.Shoplist">
+    update shoplist
+    set shopname = #{shopname,jdbcType=VARCHAR},
+      shopdes = #{shopdes,jdbcType=VARCHAR},
+      shoppri = #{shoppri,jdbcType=INTEGER},
+      shopimg = #{shopimg,jdbcType=VARCHAR}
+    where SID = #{sid,jdbcType=INTEGER}
+  </update>
+</mapper>

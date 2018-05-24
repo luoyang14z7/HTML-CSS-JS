@@ -1,0 +1,76 @@
+*{padding:0;margin:0}
+ul{list-style: none}
+a{text-decoration: none;}
+
+body
+{
+    background:rgba(249,237,234,0.5);
+    font-family: "Microsoft YaHei UI";
+    color: #3d4444;
+}
+.top1
+{
+    height:409px;
+    width:100%;
+    position: relative;
+
+}
+.about-banner
+{
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left: -800PX;
+
+}
+.con
+{
+    width:80%;
+    height:800px;
+    margin:60px auto;
+    position: relative;
+
+}
+.con p
+{
+
+    text-align: center;
+    font-size: 20px;
+    font-family: "Adobe 宋体 Std L";
+    line-height: 1.5em;
+
+}
+.con img
+{
+    position:absolute;
+}
+
+.team-img .img1
+{
+    top:380px;
+    left:580px;
+
+}
+.team-img .img2
+{
+    top:350px;
+    left:0;
+}
+
+.cul-img .img1
+{
+    top:380px;
+    left:420px;
+}
+.cul-img .img2
+{
+    top:410px;
+    left:0;
+}
+
+
+
+
+
+
+
