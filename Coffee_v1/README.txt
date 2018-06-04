@@ -26,8 +26,11 @@ selectcall 是mapper.java指向xml的ID。
  
  
  
+用户登录 && 注册。
  
- 接下来做用户登录 && 注册。
+ 注册会检测用户是否存在。
+ 
+ 登录成功后返还UID、用户名 将用户名、UID存入sessionStorage。
  
  
  
