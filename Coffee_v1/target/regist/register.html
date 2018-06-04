@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <link rel="stylesheet" type="text/css" href="/css/register.css">
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/nav.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/head.css">
-    <link rel="stylesheet" type="text/css" href="css/title.css">
-    <link rel="stylesheet" type="text/css" href="css/foot.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/nav.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/head.css">
+    <link rel="stylesheet" type="text/css" href="/css/title.css">
+    <link rel="stylesheet" type="text/css" href="/css/foot.css">
 
-    <script src="js/login.js"></script>
+
+    <script src="/js/register.js"></script>
 
 
 </head>
@@ -73,7 +74,7 @@
                     <a href="register.html"><span>Register</span></a>
                 </div>
                 <div class="head-exit">
-                    <span></span>
+                    <span id="uid"></span>
                     <span> / </span>
                     <a href="#" >Exit</a>
                 </div>
@@ -97,26 +98,29 @@
     <div class="title register-title">
         <p>Register an account</p>
     </div>
-    <form action="register.php" method="get">
+
+    <div class="register-form">
         <div class="number">
-            <label>Phone number | </label><a href="#">use E-mail to register</a>
+            <label>Phone number | </label>
             <input type="text" id="uphone" name="uphone" class="num-text" placeholder="Please enter your  number.">
-            <p class='state1'></p><br/><br/>
+            <p></p><br/>
         </div>
         <div class="password">
             <label>Password</label>
             <input type="password" id="upwd" name="upwd"  class="pass-text" placeholder="Please enter 6-12 digits password">
-            <p class='state1'></p><br/><br/>
+            <p ></p><br/><
         </div>
         <div class="password">
             <label>Confirm Password</label>
             <input type="password" id="upwd2" name="upwd"  class="confirmpass-text" placeholder="Please confirm password">
-            <span class='state1'></span><br/><br/>
+            <p ></p><br/>
         </div>
-        <div class="sign">
-        <button type="button" class="sign">Sign up now</button>
-            <a href="login.html">Existing account login</a></div>
-    </form>
+    </div>
+
+        <div class="sign-box">
+        <button type="button" id="sign">Sign up now</button>
+        <a href="login.html">Existing account login</a>
+        </div>
     </div>
 </div>
 

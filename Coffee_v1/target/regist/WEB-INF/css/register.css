@@ -52,9 +52,10 @@ body
     box-shadow: 5px 5px 5px ;
     border-radius: 20px;
     height:700px;
+    border:1px solid black;
 
 }
-.register form
+.register .register-form
 {
     width:400px;
     font-size: 20px;
@@ -63,60 +64,58 @@ body
 
 
 }
+.register .register-form p
+{
+    width:400px;
+    height:30px;
+    display: block;
 
-.register input
+}
+
+.register-form input
 {
     width:400px;
     height:40px;
-    margin:10px 0;
+    margin-top:10px;
     font-size: 18px;
     background: whitesmoke;
 }
-.register  a
-{
-    font-size: 16px;
-    color: #2d6987 ;
 
+
+.register-box .sign-box
+{
+    width:300px;
+    height:150px;
+    margin:0 auto;
+    text-align: center;
 }
 
-.register  a:hover
-{
-  text-decoration:underline;
 
-}
-.register button
+.sign-box #sign
 {
     width:140px;
     height:40px;
-    margin-top: 30px ;
-    margin-left:140px;
     font-size: 18px;
     color: #2F4056;
     background: whitesmoke;
     border:1px solid #b5cfd2;
     cursor: pointer;
     box-shadow: 5px 5px 5px #3d1a1b;
+    margin-bottom: 20px;
 }
 
-.register .sign a
+.sign-box a
 {
-    display:block;
-    width:200px;
-    height:40px;
-    margin:20px auto;
-    margin-left:110px;
-    text-align: center;
-}
-
-.state1{
-    color:#aaa;
-}
-
-.state3{
-    color:indianred;
+   display: block;
+    width:300px;
+    height:30px;
     font-size: 16px;
+    color: #2d6987 ;
+
 }
-.state4{
-    color:indianred;
+.sign-box a:hover
+{
+    text-decoration:underline;
+
 }
 

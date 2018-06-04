@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/head.css">
     <link rel="stylesheet" type="text/css" href="css/title.css">
     <link rel="stylesheet" type="text/css" href="css/foot.css">
+    <script src="js/login.js"></script>
+
 
 </head>
 <body>
@@ -72,7 +74,7 @@
                     <a href="register.html"><span>Register</span></a>
                 </div>
                 <div class="head-exit">
-                    <span></span>
+                    <span id="uid"></span>
                     <span> / </span>
                     <a href="#" >Exit</a>
                 </div>
@@ -93,24 +95,24 @@
         <div class="title login-title">
             <p>Member Login</p>
         </div>
-        <form action="login." method="get">
+
+        <div class="login-form">
         <div class="number">
             <label>Account:</label>
             <input type="text" id="uphone" name="uphone" class="num-text" placeholder="Please enter your  number.">
+            <p></p><br/>
         </div>
 
         <div class="password">
             <label>Password:</label>
             <input type="password" id="upwd" name="upwd"  class="pass-text" placeholder="Please enter 6-12 digits password">
+            <p></p><br/>
         </div>
-            <div class="login-sign">
-
-             <button type="button" >Login</button>
-
-                <span>No account yet?<a href="register.html">Go to register...</a></span>
-            </div>
-
-    </form>
+    </div>
+        <div class="login-sign">
+            <button type="button" id="login-icon">Login</button>
+            <p>No account yet?</p><a href="register.html">Go to register...</a>
+        </div>
     </div>
 </div>
 

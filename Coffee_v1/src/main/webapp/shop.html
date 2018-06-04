@@ -25,6 +25,16 @@
                     var datalist = eval('(' + 'date' + ')');
                    /* alert(datalist[1].shoppri);
                     alert(datalist.length);*/
+                    var shopname = "";
+                    var shoppri = ""
+
+                    $(".shoptest").click(function () {
+                        console.trace();
+                        alert("123");
+                        shopname = datalist[i].shopname;
+                        shoppri = datalist[i].shoppri;
+                        alert(shopname + shoppri);
+                    });
                     for (var i = 0; i <datalist.length ; i++) {
                         str += "<div class=\"shoppro\">";
                         str += " <img src=" + datalist[i].shopimg + ">";
@@ -34,15 +44,19 @@
                         str += "</div>";
                         str += "<div class=\"shopprice\">";
                         str += "<span>￥" + datalist[i].shoppri + "</span>";
-                        str += "<span><a href=\"#\">添加至购物车</a></span>";
+                        str += "<span class=\"shoptest\"> <a href='javascript:void(0)'   >添加至购物车</a></span>";
                         str += "</div>";
                         str += "</div>";
                     }
+
                     $("#hs").append(str);
+
+
                 }
 
 
             });
+
         });
 
 
@@ -107,7 +121,7 @@
                         <a href="register.html"><span>Register</span></a>
                     </div>
                     <div class="head-exit">
-                        <span></span>
+                        <span id="uid"></span>
                         <span> / </span>
                         <a href="#" >Exit</a>
                     </div>

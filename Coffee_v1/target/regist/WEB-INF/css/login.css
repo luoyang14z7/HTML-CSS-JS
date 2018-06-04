@@ -53,48 +53,60 @@ body
     border-radius: 20px;
 
 }
-.login-box form
+.login-box .login-form
 {
     margin:0 auto;
     width:400px;
+    height:250px;
     font-size: 18px;
 }
-.login-box input
+.login-box .login-form input
 {
     width:400px;
     height:40px;
-    margin:30px 0;
+    margin-top:10px;
     font-size: 18px;
     background: whitesmoke;
 }
-.login-box .num-text
+.login-box .login-form p
+{
+    width:400px;
+    height:30px;
+    display: block;
+}
+.login-box .login-sign
 {
 
+    width:300px;
+    height:150px;
+    margin:0 auto;
+    text-align: center;
 }
-.login-sign button
+.login-sign #login-icon
 {
-    width:120px;
-    height:50px;
-    margin: 30px 140px;
+    width:150px;
+    height:40px;
     font-size: 18px;
     color: #2F4056;
     background: whitesmoke;
     border:1px solid #b5cfd2;
     cursor: pointer;
     box-shadow: 5px 5px 5px #3d1a1b;
+    margin-bottom: 20px;
 }
-.login-sign span
+.login-sign p
 {
-    display:block;
-    width:400px;
-    height:60px;
-    text-align: center;
+    width:300px;
+    height:30px;
+    display: block;
 }
 .login-sign  a
 {
-
-    color: #2d6987 ;
+    display: block;
+    width:300px;
+    height:30px;
     font-size: 16px;
+    color: #2d6987 ;
 
 }
 

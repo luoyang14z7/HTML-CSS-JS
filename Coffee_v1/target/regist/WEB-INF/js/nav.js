@@ -1,5 +1,13 @@
 $(document).ready(function(){
-
+    if(sessionStorage==null)
+    {
+        window.location = "login.html";
+    }
+    else{
+        $(".head-login").css('display','none');
+        $(".head-exit").css('display','block');
+        $(".head-exit #uid").text(sessionStorage.getItem('uphone'));
+    }
 
 
 

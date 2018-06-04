@@ -50,10 +50,23 @@ a{text-decoration: none;}
     float: right;
     line-height: 80px;
     text-align: center;
+    height:80px;
+    width:220px;
 }
+.nav .head-login
+{
+    border:1px solid black;
+    display:block;
+    height:80px;
+    width:220px;
+
+}
+
 .nav .right-login .head-exit
 {
     display:none;
+    height:80px;
+    width:220px;
 }
 
 /*左边和右边导航栏*/
