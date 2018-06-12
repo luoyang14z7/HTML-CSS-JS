@@ -13,54 +13,81 @@
     <link rel="stylesheet" type="text/css" href="css/foot.css">
     <script type="text/javascript">
         $(document).ready(function(){
-            $.ajax({
+                $.ajax({
+                    type: "post",
+                    url: "getshoplist",
+                    dateType: "json",
+                    async: false,
+                    success: function (date) {
+                        var str = "";
+                        var datalist = eval('(' + 'date' + ')');
+                        /* alert(datalist[1].shoppri);
+                         alert(datalist.length);*/
+                        var shopname = "";
+                        var shoppri = ""
+                        $(document).on("click", ".click", function () {
+                            var uid = sessionStorage.getItem("uid");
+                            if (uid == null) {
+                                alert("请先登录！");
+                                window.location.href = "login.html";
+                            }
+                            var i = $(this).val();
+                            var SID = datalist[i].SID;
+                            shoppri = datalist[i].shoppri;
+                            var shopnum = 1;
+                            console.log(i);
+                            console.log(shopname + shoppri + shopnum);
+                            $.ajax({       //用ajax来实现不刷新网页的基础上更新数据
+                                type: "post", //请求方式
+                                url: "addshopcart", //路径
+                                data: {
+                                    "uid": uid,
+                                    "SID": SID,
+                                    "shoppri": shoppri,
+                                    "shopnum": shopnum
+                                },
+                                dataType: "json",
+                                async: false,
+                                success: function (flag) {
+                                    if (flag) {
+                                        alert("添加成功");
+                                    }
+                                    else {
+                                        alert("添加失败")
+                                    }
+                                }
 
-                type: "post",
-                url: "getshoplist",
-                dateType: "json",
-                async: false,
-                success: function (date) {
 
-                    var str = "";
-                    var datalist = eval('(' + 'date' + ')');
-                   /* alert(datalist[1].shoppri);
-                    alert(datalist.length);*/
-                    var shopname = "";
-                    var shoppri = ""
+                            });
+                        });
+                        for (var i = 0; i < datalist.length; i++) {
+                            str += "<div class=\"shoppro\">";
+                            str += " <img src=" + datalist[i].shopimg + ">";
+                            str += "<div class=\"shoptxt\">";
+                            str += "<h4>" + datalist[i].shopname + "</h4>";
+                            str += "<p>" + datalist[i].shopdes + "</p>";
+                            str += "</div>";
+                            str += "<div class=\"shopprice\">";
+                            str += "<span>￥" + datalist[i].shoppri + "</span>";
+                            str += "<span> <button class=\"click\" value=" + i +">添加至购物车</button></span>";
+                            str += "</div>";
+                            str += "</div>";
 
-                    $(".shoptest").click(function () {
-                        console.trace();
-                        alert("123");
-                        shopname = datalist[i].shopname;
-                        shoppri = datalist[i].shoppri;
-                        alert(shopname + shoppri);
-                    });
-                    for (var i = 0; i <datalist.length ; i++) {
-                        str += "<div class=\"shoppro\">";
-                        str += " <img src=" + datalist[i].shopimg + ">";
-                        str += "<div class=\"shoptxt\">";
-                        str += "<h4>" + datalist[i].shopname + "</h4>";
-                        str += "<p>" + datalist[i].shopdes + "</p>";
-                        str += "</div>";
-                        str += "<div class=\"shopprice\">";
-                        str += "<span>￥" + datalist[i].shoppri + "</span>";
-                        str += "<span class=\"shoptest\"> <a href='javascript:void(0)'   >添加至购物车</a></span>";
-                        str += "</div>";
-                        str += "</div>";
+                        }
+
+                        $("#hs").append(str);
+
+
                     }
 
-                    $("#hs").append(str);
 
-
-                }
-
+                });
 
             });
 
-        });
-
 
     </script>
+
 </head>
 <body>
 <div class="shop-top">
@@ -134,7 +161,7 @@
         <img src="image/banner2-6.png" width="1600" >
     </div>
 
-    </div>
+</div>
 
 
 <div class="title shoptitle">

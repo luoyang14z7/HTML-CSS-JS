@@ -17,9 +17,9 @@
     from shoplist
     where SID = #{sid,jdbcType=INTEGER}
   </select>
-  <select id="selectall"  parameterType="java.util.HashMap" resultType="map">
+  <select id="selectall"   resultType="map">
     select
-    shopname,shopdes,shoppri,shopimg
+    SID,shopname,shopdes,shoppri,shopimg
     from shoplist
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">

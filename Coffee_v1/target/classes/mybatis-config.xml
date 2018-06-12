@@ -25,5 +25,7 @@
 
      <mapper resource="yang/mapper/ShoplistMapper.xml"/>
        <mapper resource="yang/mapper/UserMapper.xml"/>
+       <mapper resource="yang/mapper/ShopcartMapper.xml"/>
+       <mapper resource="yang/mapper/OrderlistMapper.xml"/>
     </mappers>
 </configuration>

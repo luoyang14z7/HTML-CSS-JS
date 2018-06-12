@@ -1,25 +1,26 @@
-
 $(document).ready(function() {
-    $(".orderbox").eq(0).show();
-   $(".er li").eq(0).addClass("on")
-
-    //alert($(".er li").length);
-    //alert($(".box").length)
-    //var size= $(".box").length;
-    //alert($(".box").index());
-
-    $(".button1").click(function(){
-        $(".orderbox").eq(1).show();
-        $(".orderbox").eq(0).hide();
-        $(".orderbox").eq(2).hide();
-        $(".er li").eq(1).addClass("on").siblings().removeClass("on");
-    })
-    $(".button2").click(function(){
-        $(".orderbox").eq(2).show();
-        $(".orderbox").eq(0).hide();
-        $(".orderbox").eq(1).hide();
-        $(".er li").eq(2).addClass("on").siblings().removeClass("on");
-    })
-
-
-})
+    var uid = sessionStorage.getItem("uid");
+    if (uid == null) {
+        alert("请先登录！");
+        window.location.href = "login.html";
+    }
+    $.ajax({
+        type: "post",
+        url: "getorderlist",
+        dateType: "json",
+        data: {
+            "uid": uid,
+        },
+        success: function (date) {
+           /* alert(date[0].oid);*/
+            $("#oid").html(date[0].oid);
+            $("#oname").html(date[0].oname);
+            $("#oaddress").html(date[0].oaddress);
+            $("#ophone").html(date[0].ophone);
+            $("#opri").html(date[0].paypri);
+            $("#opaychose").html(date[0].opay);
+            $("#odata").html( new Date(date[0].odata * 1000).toLocaleString());
+            $("#ostat").html(date[0].ostat);
+        }
+    });
+});

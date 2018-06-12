@@ -7,13 +7,11 @@
     <link rel="stylesheet" type="text/css" href="css/head.css">
     <script src="js/nav.js"></script>
 
-    <script src="js/order.js"></script>
+    <script src="js/cart.js"></script>
     <link rel="stylesheet" type="text/css" href="css/cart.css">
+
 </head>
 <body>
-
-
-
 <!-- 头部-->
 <div class="cart-top">
     <div class="head">
@@ -94,41 +92,21 @@
     <div class="orderbox box1">
         <div class="cart_box">
             <table width="1100" border="0" align="center" cellpadding="8" cellspacing="0" >
-                <tbody>
-                <tr bgcolor="#f5f5f5" >
-                    <th width="100"></th>
+                <tbody id="cartlist">
+                <tr bgcolor="#f5f5f5"  >
+                    <th width="100" ></th>
                     <th align="left">商品名称</th>
                     <th width="200" align="center">单价</th>
                     <th width="200" align="center">数量</th>
-                    <!--<th width="80" align="center">优惠</th>-->
                     <th width="150" align="center">操作</th>
                 </tr>
-
-                <tr>
-                    <td ><a href="#"><img src="image/slide-1.jpg" height="180" class="img"></a></td>
-                    <td><a  href="#">咖啡豆</a></td>
-                    <!--价格-->
-                    <td align="center">￥260.00<input name="goods_price" type="hidden" value="2600.00"></td><!-- value=用户价格 -->
-                    <!--数量-->
-                    <td align="center">
-                        <a href="#" class="reduce" >-</a>
-                        <input type="text" name="goods_quantity" class="input" style="width:30px;text-align:center;ime-mode:Disabled;" value="1" >
-                        <a href="#" class="subjoin">+</a>
-                    </td>
-                    <td align="center"><a href="#">删除</a></td>
-                </tr>
-
-                <tr bgcolor="#f5f5f5">
-                    <th colspan="9" align="right">
-                        商品件数：1 件&nbsp;&nbsp;&nbsp; 商品总金额（不含运费）：<font color="#FF0000" >￥260</font>
-                    </th>
-                </tr>
-
                 </tbody>
             </table>
+
         </div>
+
         <button class="button1" type="button">马上去结算</button>
-        <button class="continue" type="button">继续购物</button>
+        <button class="continue" type="button" onclick="window.location='shop.html'">继续购物</button>
 
     </div>
 
@@ -144,37 +122,33 @@
 
                         <tr  height="60">
                             <td width="300" align="right" >*收货人姓名：</td>
-                            <td><input type="text" name="username" ></td>
+                            <td><input id="payname" type="text" name="payname" ></td>
                         </tr>
 
                         <tr height="60">
                             <td width="300" align="right" >*手机号码：</td>
-                            <td><input type="text" name="phone" ></td>
+                            <td><input id="payphone" type="text" name="payphone" ></td>
                         </tr>
                         <tr height="60">
                             <td width="300" align="right">*收货地址：</td>
-                            <td><input type="password" name="password" ></td>
+                            <td><input id="payaddress" type="text" name="payaddress" ></td>
                         </tr>
 
-                        <tr height="60">
-                            <td width="300" align="right">*邮政编码：</td>
-                            <td><input type="password" name="password"></td>
-                        </tr>
                     </table>
                 </td>
             </tr>
 
             <tr>
                 <td >
-                    <table class="pay_box"   width="100%" cellspacing="0">
+                    <table class="pay_box"   width="100%" cellspacing="0" >
                         <tr bgcolor="#f5f5f5" height="40">
                             <td colspan="3">支付方式:</td>
                         </tr>
 
                         <tr  height="60" >
-                            <td width="240"><input type="radio" name="yongtu" >支付宝  </td>
-                            <td width="240"><input type="radio" name="yongtu" >微信</td>
-                            <td width="240"><input type="radio" name="yongtu" >银联</td>
+                            <td width="240"><input type="radio" name="paychose"  value="支付宝">支付宝  </td>
+                            <td width="240"><input type="radio" name="paychose" value="微信">微信</td>
+                            <td width="240"><input type="radio" name="paychose"  value="银联">银联</td>
 
                     </table>
                 </td>
@@ -186,7 +160,7 @@
             <tr>
                 <td>
                     <table width="1100" border="0" align="center" cellpadding="8" cellspacing="0" class="cart_table">
-                        <tbody>
+                        <tbody id="carttoorder">
                         <tr bgcolor="#f5f5f5" height="40">
                             <td colspan="4">商品清算：</td>
                         </tr>
@@ -201,39 +175,28 @@
                             <th width="200" align="center">数量</th>
                         </tr>
 
-                        <tr >
-                            <td><a target="_blank" href="#"><img  src="image/slide-1.jpg" height="180" class="img"></a></td>
-                            <td><a target="_blank" href="#">咖啡豆</a></td>
-                            <!--颜色-->
 
-                            <td align="center">￥5500.00<input name="goods_price" type="hidden" value="5500.00"></td>
-                            <td align="center">1</td>
 
-                        </tr>
-                        <tr bgcolor="#f5f5f5">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td align="right">应付总额：<font color="#FF0000">￥<label >200</label></font></td>
-                        </tr>
 
                         </tbody></table>
                 </td>
             </tr>
         </table>
-        <button class="button2" type="button">确认支付</button>
+
+        <button class="button2" type="button" id="pay">确认支付</button>
+        <button class="button2" type="button" onclick="location.reload()">返回购物车</button>
     </div>
 
     <div class="orderbox box3">
 
-        <div class="msg_tips">
-            <div class="ico"></div>
+        <div class="msg_tips" id="ali">
+<!--            <div class="ico"></div>
             <div class="msg">
                 <strong>支付成功啦！</strong>
                 <p>恭喜您，您的支付已经成功！</p>
                 <p>您可以点击这里进入<a href="">会员中心</a>查看订单状态！</p>
                 <p>如有其它问题，请立即与我们客服人员联系。</p>
-            </div>
+            </div>-->
         </div>
 
     </div>

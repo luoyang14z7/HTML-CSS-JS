@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="yang.dao.OrderlistMapper" >
+  <resultMap id="BaseResultMap" type="yang.model.Orderlist" >
+    <id column="oid" property="oid" jdbcType="INTEGER" />
+    <result column="oname" property="oname" jdbcType="VARCHAR" />
+    <result column="oaddress" property="oaddress" jdbcType="VARCHAR" />
+    <result column="ophone" property="ophone" jdbcType="VARCHAR" />
+    <result column="uid" property="uid" jdbcType="INTEGER" />
+    <result column="opay" property="opay" jdbcType="VARCHAR" />
+    <result column="odate" property="odate" jdbcType="INTEGER" />
+    <result column="ostat" property="ostat" jdbcType="VARCHAR" />
+    <result column="paypri" property="paypri" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    oid, oname, oaddress, ophone, uid, opay, odate, ostat, paypri
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from orderlist2
+    where oid = #{oid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from orderlist2
+    where oid = #{oid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="yang.model.Orderlist" >
+    insert into orderlist2 ( oname, oaddress,
+      ophone, uid, opay, 
+      odate, ostat, paypri
+      )
+    values ( #{oname,jdbcType=VARCHAR}, #{oaddress,jdbcType=VARCHAR},
+      #{ophone,jdbcType=VARCHAR}, #{uid,jdbcType=INTEGER}, #{opay,jdbcType=VARCHAR}, 
+      #{odate,jdbcType=INTEGER}, #{ostat,jdbcType=VARCHAR}, #{paypri,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="yang.model.Orderlist" >
+    insert into orderlist2
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="oid != null" >
+        oid,
+      </if>
+      <if test="oname != null" >
+        oname,
+      </if>
+      <if test="oaddress != null" >
+        oaddress,
+      </if>
+      <if test="ophone != null" >
+        ophone,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="opay != null" >
+        opay,
+      </if>
+      <if test="odate != null" >
+        odate,
+      </if>
+      <if test="ostat != null" >
+        ostat,
+      </if>
+      <if test="paypri != null" >
+        paypri,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="oid != null" >
+        #{oid,jdbcType=INTEGER},
+      </if>
+      <if test="oname != null" >
+        #{oname,jdbcType=VARCHAR},
+      </if>
+      <if test="oaddress != null" >
+        #{oaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="ophone != null" >
+        #{ophone,jdbcType=VARCHAR},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="opay != null" >
+        #{opay,jdbcType=VARCHAR},
+      </if>
+      <if test="odate != null" >
+        #{odate,jdbcType=INTEGER},
+      </if>
+      <if test="ostat != null" >
+        #{ostat,jdbcType=VARCHAR},
+      </if>
+      <if test="paypri != null" >
+        #{paypri,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="yang.model.Orderlist" >
+    update orderlist2
+    <set >
+      <if test="oname != null" >
+        oname = #{oname,jdbcType=VARCHAR},
+      </if>
+      <if test="oaddress != null" >
+        oaddress = #{oaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="ophone != null" >
+        ophone = #{ophone,jdbcType=VARCHAR},
+      </if>
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="opay != null" >
+        opay = #{opay,jdbcType=VARCHAR},
+      </if>
+      <if test="odate != null" >
+        odate = #{odate,jdbcType=INTEGER},
+      </if>
+      <if test="ostat != null" >
+        ostat = #{ostat,jdbcType=VARCHAR},
+      </if>
+      <if test="paypri != null" >
+        paypri = #{paypri,jdbcType=INTEGER},
+      </if>
+    </set>
+    where oid = #{oid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="yang.model.Orderlist" >
+    update orderlist2
+    set oname = #{oname,jdbcType=VARCHAR},
+      oaddress = #{oaddress,jdbcType=VARCHAR},
+      ophone = #{ophone,jdbcType=VARCHAR},
+      uid = #{uid,jdbcType=INTEGER},
+      opay = #{opay,jdbcType=VARCHAR},
+      odate = #{odate,jdbcType=INTEGER},
+      ostat = #{ostat,jdbcType=VARCHAR},
+      paypri = #{paypri,jdbcType=INTEGER}
+    where oid = #{oid,jdbcType=INTEGER}
+  </update>
+  <select id="selectone" parameterType="yang.model.Orderlist" resultType="map">
+    select oid,oname,oaddress,ophone,opay,odate,ostat,paypri from orderlist2 where uid=#{uid}
+  </select>
+</mapper>

@@ -32,6 +32,7 @@ body
 /*    height:400px;*/
     padding-bottom: 30px;
     margin:0 auto;
+    height:1200px;
 
 
 }
@@ -57,11 +58,11 @@ body
     left:8px;
 
 }
-.shop-content  a
+.shop-content  button
 {
     color: #3d4444;
 }
-.shop-content .shoptxt a:hover
+.shop-content .shoptxt button:hover
 {
     text-decoration: underline;
 }
@@ -72,7 +73,7 @@ body
     margin:20px auto;
     line-height: 40px;
 }
-.shop-content .shopprice a
+.shop-content .shopprice button
 {
    display:inline-block;
     width:110px;
@@ -85,7 +86,7 @@ body
     text-align: center;
 }
 
-.shop-content .shopprice a:hover
+.shop-content .shopprice button:hover
 {
     background:rgba(224,187,145,0.5);
 }

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yang.dao.ShopcartMapper">
+  <resultMap id="BaseResultMap" type="yang.model.Shopcart">
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+    <result column="SID" jdbcType="INTEGER" property="sid" />
+    <result column="shoppri" jdbcType="INTEGER" property="shoppri" />
+    <result column="num" jdbcType="INTEGER" property="num" />
+  </resultMap>
+  <select id="selectcart"  parameterType="yang.model.Shopcart" resultType="map">
+    select shopcart.SID,shoplist.shopimg,shoplist.shopname,shopcart.shoppri,shopcart.num from shoplist,shopcart where shoplist.SID=shopcart.SID and shopcart.uid=#{uid} group by shopcart.SID order by shoplist.SID
+  </select>
+  <insert id="insert" parameterType="yang.model.Shopcart" >
+
+insert into shopcart(uid,SID,shoppri,num) select #{uid,jdbcType=INTEGER},#{sid,jdbcType=INTEGER},#{shoppri,jdbcType=INTEGER},#{num,jdbcType=INTEGER} from dual
+where not exists(select num from shopcart where uid=#{uid,jdbcType=INTEGER} and SID=#{sid,jdbcType=INTEGER})
+
+  </insert>
+  <delete id="deleteclick" parameterType="integer">
+    delete from shopcart where uid=#{uid} and SID=#{sid}
+  </delete>
+  <delete id="deletecart" parameterType="integer">
+    delete from shopcart where uid=#{uid}
+  </delete>
+  <update id="jiaclick" parameterType="integer">
+    update shopcart set num=num+1 where uid=#{uid} and SID=#{sid}
+  </update>
+  <update id="jianclick" parameterType="integer">
+    update shopcart set num=num-1 where uid=#{uid} and SID=#{sid}
+  </update>
+  <insert id="insertSelective" parameterType="yang.model.Shopcart">
+    insert into shopcart
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        uid,
+      </if>
+      <if test="sid != null">
+        SID,
+      </if>
+      <if test="shoppri != null">
+        shoppri,
+      </if>
+      <if test="num != null">
+        num,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+      <if test="sid != null">
+        #{sid,jdbcType=INTEGER},
+      </if>
+      <if test="shoppri != null">
+        #{shoppri,jdbcType=INTEGER},
+      </if>
+      <if test="num != null">
+        #{num,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+
+
+</mapper>
