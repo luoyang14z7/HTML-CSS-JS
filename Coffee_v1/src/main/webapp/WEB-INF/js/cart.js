@@ -117,9 +117,9 @@ $(document).ready(function() {
                 str += "<td ><a href=\"#\"><img src=" + datalist[i].shopimg + " height=\"180\" class=\"img\"></a></td>";
                 str += "<td><a  href=\"#\">" + datalist[i].shopname + "</a></td>";
                 str += "<td align=\"center\">￥" + datalist[i].shoppri + ".00<input name=\"goods_price\" type=\"hidden\" value=\"2600.00\"></td>";
-                str += "<td align=\"center\" class='icon'>";
-                str += "<button id='jian' class=\"jian\" value="+ i + " >-</a>";
-                str += "<input type=\"text\" name=\"goods_quantity\" id='numinput' class=\"input\" style=\"width:30px;text-align:center;ime-mode:Disabled;\" value=" + datalist[i].shopnum +" >";
+                str += "<td align=\"center\" class='icon' >";
+                str += "<button id='jian' class=\"jian\" value="+ i + " >-</button>";
+                str += "<input type=\"text\" name=\"goods_quantity\"  style=\"width:30px;height:20px;text-align:center;position: absolute;top:80px;left:100px;\" value=" + datalist[i].shopnum +" readonly=\"readonly\" />";
                 str += "<button id='jia' class=\"jia\" value="+ i +">+</button>";
                 str += "</td>";
                 str += "<td align=\"center\"><button  id='delete' class=\"click\" value=" + i +" >删除</button></td>";
